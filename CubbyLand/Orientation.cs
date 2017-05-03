@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CubbyLand
 {
-    class Orientation
+    public class Orientation
     {
         public static Orientation CW = new Orientation("CW");
         public static Orientation CCW = new Orientation("CCW");
