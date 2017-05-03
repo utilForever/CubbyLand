@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CubbyLand
 {
-    public partial class Form1 : Form
+    public partial class CubbyLand : Form
     {
-        public Form1()
+        public CubbyLand()
         {
             InitializeComponent();
+        }
+
+        private void CubbyLand_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
