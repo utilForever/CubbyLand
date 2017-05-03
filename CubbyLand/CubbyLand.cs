@@ -46,11 +46,8 @@ namespace CubbyLand
         {
             InitializeComponent();
             g = this.MapPanel.CreateGraphics();
-        }
 
-        private void CubbyLand_Load(object sender, EventArgs e)
-        {
-
+            seedGen = new Random();
         }
     }
 }

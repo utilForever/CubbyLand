@@ -343,7 +343,6 @@
             this.Name = "CubbyLand";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "CubbyLand";
-            this.Load += new System.EventHandler(this.CubbyLand_Load);
             this.ToolPanel.ResumeLayout(false);
             this.ToolPanel.PerformLayout();
             this.MapPanel.ResumeLayout(false);
