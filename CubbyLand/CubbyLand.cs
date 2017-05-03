@@ -35,6 +35,7 @@ namespace CubbyLand
         private int numLloyd = 2;
         private int bounds = 850;
         private int seed = 0;
+        private VoronoiGraph voronoiGraph;
         private Random seedGen;
         private Bitmap img;
         private Bitmap img2;
@@ -49,5 +50,81 @@ namespace CubbyLand
 
             seedGen = new Random();
         }
+
+        #region Create Button
+
+        private void CreateButton_Click(object sender, EventArgs e)
+        {
+            if (nSitesBox.Text != "")
+            {
+                try
+                {
+                    numSites = int.Parse(nSitesBox.Text);
+                }
+                catch (Exception)
+                {
+                    numSites = 6000;
+                }
+            }
+            else
+            {
+                numSites = 6000;
+            }
+
+            if (nLloydBox.Text != "")
+            {
+                try
+                {
+                    numLloyd = int.Parse(nLloydBox.Text);
+                }
+                catch (Exception)
+                {
+                    numLloyd = 2;
+                }
+            }
+            else
+            {
+                numLloyd = 2;
+            }
+            if (BoundsBox.Text != "")
+            {
+                try
+                {
+                    bounds = int.Parse(BoundsBox.Text);
+                }
+                catch (Exception)
+                {
+                    bounds = 850;
+                }
+            }
+            else
+            {
+                bounds = 850;
+            }
+            if (isRandom)
+            {
+                seed = seedGen.Next();
+                seedBox.Text = seed + "";
+            }
+            else if (seedBox.Text != "")
+            {
+                try
+                {
+                    seed = int.Parse(seedBox.Text);
+                }
+                catch (Exception)
+                {
+                    seed = seedGen.Next();
+                    seedBox.Text = seed + "";
+                }
+            }
+            else
+            {
+                seed = seedGen.Next();
+                seedBox.Text = seed + "";
+            }
+        }
+
+        #endregion Create Button
     }
 }

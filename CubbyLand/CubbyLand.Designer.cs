@@ -312,6 +312,7 @@
             this.CreateButton.TabIndex = 0;
             this.CreateButton.Text = "Create!";
             this.CreateButton.UseVisualStyleBackColor = false;
+            this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
             // MapPanel
             // 
