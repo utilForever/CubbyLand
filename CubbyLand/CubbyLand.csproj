@@ -57,6 +57,7 @@
     <Compile Include="LineSegment.cs" />
     <Compile Include="Orientation.cs" />
     <Compile Include="Point.cs" />
+    <Compile Include="Polygon.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rectangle.cs" />
