@@ -51,10 +51,15 @@
     <Compile Include="CubbyLand.Designer.cs">
       <DependentUpon>CubbyLand.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edge.cs" />
+    <Compile Include="LineSegment.cs" />
     <Compile Include="Orientation.cs" />
     <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Site.cs" />
+    <Compile Include="Vertex.cs" />
     <EmbeddedResource Include="CubbyLand.resx">
       <DependentUpon>CubbyLand.cs</DependentUpon>
     </EmbeddedResource>

@@ -8,8 +8,8 @@ namespace CubbyLand
 {
     public class Orientation
     {
-        public static Orientation CW = new Orientation("CW");
-        public static Orientation CCW = new Orientation("CCW");
+        public static Orientation LEFT = new Orientation("LEFT");
+        public static Orientation RIGHT = new Orientation("RIGHT");
         public string name;
 
         public Orientation(string name)
@@ -19,7 +19,7 @@ namespace CubbyLand
 
         public static Orientation Other(Orientation orientation)
         {
-            return (orientation == CW ? CCW : CW);
+            return (orientation == LEFT ? RIGHT : LEFT);
         }
     }
 }
