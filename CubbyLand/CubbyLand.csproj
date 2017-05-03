@@ -62,6 +62,7 @@
     <Compile Include="Rectangle.cs" />
     <Compile Include="Site.cs" />
     <Compile Include="Vertex.cs" />
+    <Compile Include="Voronoi.cs" />
     <EmbeddedResource Include="CubbyLand.resx">
       <DependentUpon>CubbyLand.cs</DependentUpon>
     </EmbeddedResource>
