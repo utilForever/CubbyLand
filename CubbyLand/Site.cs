@@ -27,7 +27,10 @@ namespace CubbyLand
         public static Site Create(Point p, int index, double weight)
         {
             if (pool.Count > 0)
+            {
                 return pool.Pop().Initialize(p, index, weight);
+            }
+
             return new Site(p, index, weight);
         }
 
