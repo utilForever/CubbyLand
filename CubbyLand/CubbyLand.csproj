@@ -53,6 +53,7 @@
       <DependentUpon>CubbyLand.cs</DependentUpon>
     </Compile>
     <Compile Include="Edge.cs" />
+    <Compile Include="EdgeList.cs" />
     <Compile Include="EdgeReorderer.cs" />
     <Compile Include="HalfEdge.cs" />
     <Compile Include="ICoord.cs" />
