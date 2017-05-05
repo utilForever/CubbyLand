@@ -74,6 +74,7 @@
     <Compile Include="Triangle.cs" />
     <Compile Include="Vertex.cs" />
     <Compile Include="Voronoi.cs" />
+    <Compile Include="VoronoiGraph.cs" />
     <Compile Include="Winding.cs" />
     <EmbeddedResource Include="CubbyLand.resx">
       <DependentUpon>CubbyLand.cs</DependentUpon>
