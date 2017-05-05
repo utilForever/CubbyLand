@@ -22,9 +22,27 @@ The main code of this repository is based on [Polygonal Map Generator](https://g
 * Use parameters to control map generation (e.g. the number of islands, maximum heights of map, and so on).
 * Use polygonal map generator for basement (e.g. lava, mineral, cave, ground water, and so on).
 
+### To-do
+
+* Add parameters to control map generation (e.g. the number of islands, maximum heights of map, and so on).
+  * Seed
+  * The number of points
+  * The size of map
+  * The number of islands
+  * The size of island
+  * The number of rivers
+  * The size of river
+  * Noise
+  * Biome ratio
+  * Land ratio
+  * Output data options
+  * Etc
+* Make grid-based calculation and show grid-based map result.
+* Add polygonal map generator for basement (e.g. lava, mineral, cave, ground water, and so on).
+
 ## Screenshots
 
-TBA
+<img src="https://github.com/utilForever/CubbyLand/blob/master/Screenshot.png"/>
 
 ## License
 
