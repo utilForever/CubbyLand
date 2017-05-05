@@ -16,7 +16,6 @@ namespace CubbyLand
         int largestFeature;
         double persistence;
         int seed;
-
         public SimplexNoise(int largest, double persistence, int seed)
         {
             this.largestFeature = largest;
