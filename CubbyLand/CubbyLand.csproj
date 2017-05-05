@@ -52,6 +52,7 @@
     <Compile Include="CubbyLand.Designer.cs">
       <DependentUpon>CubbyLand.cs</DependentUpon>
     </Compile>
+    <Compile Include="DelaunayEdge.cs" />
     <Compile Include="Edge.cs" />
     <Compile Include="EdgeList.cs" />
     <Compile Include="EdgeReorderer.cs" />
