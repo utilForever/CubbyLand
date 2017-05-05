@@ -45,7 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Center.cs" />
     <Compile Include="Circle.cs" />
+    <Compile Include="Corner.cs" />
     <Compile Include="CubbyLand.cs">
       <SubType>Form</SubType>
     </Compile>
