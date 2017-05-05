@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.ToolPanel = new System.Windows.Forms.Panel();
-            this.SaveButton = new System.Windows.Forms.Button();
             this.LightingCheck = new System.Windows.Forms.CheckBox();
             this.BlendCheck = new System.Windows.Forms.CheckBox();
             this.OverlayCheck = new System.Windows.Forms.CheckBox();
@@ -53,6 +52,7 @@
             this.CreateButton = new System.Windows.Forms.Button();
             this.MapPanel = new System.Windows.Forms.Panel();
             this.MapImageBox = new System.Windows.Forms.PictureBox();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.ToolPanel.SuspendLayout();
             this.MapPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MapImageBox)).BeginInit();
@@ -89,18 +89,6 @@
             this.ToolPanel.Size = new System.Drawing.Size(934, 68);
             this.ToolPanel.TabIndex = 0;
             // 
-            // SaveButton
-            // 
-            this.SaveButton.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.SaveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.SaveButton.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveButton.Location = new System.Drawing.Point(856, 3);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(75, 62);
-            this.SaveButton.TabIndex = 17;
-            this.SaveButton.Text = "Save";
-            this.SaveButton.UseVisualStyleBackColor = false;
-            // 
             // LightingCheck
             // 
             this.LightingCheck.AutoSize = true;
@@ -108,10 +96,11 @@
             this.LightingCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.LightingCheck.Location = new System.Drawing.Point(623, 44);
             this.LightingCheck.Name = "LightingCheck";
-            this.LightingCheck.Size = new System.Drawing.Size(63, 17);
+            this.LightingCheck.Size = new System.Drawing.Size(69, 17);
             this.LightingCheck.TabIndex = 15;
             this.LightingCheck.Text = "Lighting";
             this.LightingCheck.UseVisualStyleBackColor = true;
+            this.LightingCheck.CheckedChanged += new System.EventHandler(this.LightingCheck_CheckedChanged);
             // 
             // BlendCheck
             // 
@@ -120,10 +109,11 @@
             this.BlendCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.BlendCheck.Location = new System.Drawing.Point(526, 25);
             this.BlendCheck.Name = "BlendCheck";
-            this.BlendCheck.Size = new System.Drawing.Size(85, 17);
+            this.BlendCheck.Size = new System.Drawing.Size(91, 17);
             this.BlendCheck.TabIndex = 11;
             this.BlendCheck.Text = "Biome Blend";
             this.BlendCheck.UseVisualStyleBackColor = true;
+            this.BlendCheck.CheckedChanged += new System.EventHandler(this.BlendCheck_CheckedChanged);
             // 
             // OverlayCheck
             // 
@@ -132,10 +122,11 @@
             this.OverlayCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.OverlayCheck.Location = new System.Drawing.Point(623, 6);
             this.OverlayCheck.Name = "OverlayCheck";
-            this.OverlayCheck.Size = new System.Drawing.Size(92, 17);
+            this.OverlayCheck.Size = new System.Drawing.Size(98, 17);
             this.OverlayCheck.TabIndex = 13;
             this.OverlayCheck.Text = "Noise Overlay";
             this.OverlayCheck.UseVisualStyleBackColor = true;
+            this.OverlayCheck.CheckedChanged += new System.EventHandler(this.OverlayCheck_CheckedChanged);
             // 
             // NoisyCheck
             // 
@@ -144,21 +135,23 @@
             this.NoisyCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.NoisyCheck.Location = new System.Drawing.Point(623, 25);
             this.NoisyCheck.Name = "NoisyCheck";
-            this.NoisyCheck.Size = new System.Drawing.Size(85, 17);
+            this.NoisyCheck.Size = new System.Drawing.Size(91, 17);
             this.NoisyCheck.TabIndex = 14;
             this.NoisyCheck.Text = "Noisy Edges";
             this.NoisyCheck.UseVisualStyleBackColor = true;
+            this.NoisyCheck.CheckedChanged += new System.EventHandler(this.NoisyCheck_CheckedChanged);
             // 
             // RHeightCheck
             // 
             this.RHeightCheck.AutoSize = true;
             this.RHeightCheck.Location = new System.Drawing.Point(371, 25);
             this.RHeightCheck.Name = "RHeightCheck";
-            this.RHeightCheck.Size = new System.Drawing.Size(61, 17);
+            this.RHeightCheck.Size = new System.Drawing.Size(67, 17);
             this.RHeightCheck.TabIndex = 6;
             this.RHeightCheck.Tag = "Adds random elevation to give a different possibly better appearance";
             this.RHeightCheck.Text = "R. Elev";
             this.RHeightCheck.UseVisualStyleBackColor = true;
+            this.RHeightCheck.CheckedChanged += new System.EventHandler(this.RHeightCheck_CheckedChanged);
             // 
             // label4
             // 
@@ -183,10 +176,11 @@
             this.RandomCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.RandomCheck.Location = new System.Drawing.Point(371, 44);
             this.RandomCheck.Name = "RandomCheck";
-            this.RandomCheck.Size = new System.Drawing.Size(66, 17);
+            this.RandomCheck.Size = new System.Drawing.Size(72, 17);
             this.RandomCheck.TabIndex = 5;
             this.RandomCheck.Text = "Random";
             this.RandomCheck.UseVisualStyleBackColor = true;
+            this.RandomCheck.CheckedChanged += new System.EventHandler(this.RandomCheck_CheckedChanged);
             // 
             // RefreshButton
             // 
@@ -199,6 +193,7 @@
             this.RefreshButton.TabIndex = 16;
             this.RefreshButton.Text = "Refresh!";
             this.RefreshButton.UseVisualStyleBackColor = false;
+            this.RefreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // DelaunayCheck
             // 
@@ -209,26 +204,29 @@
             this.DelaunayCheck.TabIndex = 9;
             this.DelaunayCheck.Text = "Delaunay";
             this.DelaunayCheck.UseVisualStyleBackColor = true;
+            this.DelaunayCheck.CheckedChanged += new System.EventHandler(this.DelaunayCheck_CheckedChanged);
             // 
             // SitesCheck
             // 
             this.SitesCheck.AutoSize = true;
             this.SitesCheck.Location = new System.Drawing.Point(449, 6);
             this.SitesCheck.Name = "SitesCheck";
-            this.SitesCheck.Size = new System.Drawing.Size(49, 17);
+            this.SitesCheck.Size = new System.Drawing.Size(55, 17);
             this.SitesCheck.TabIndex = 7;
             this.SitesCheck.Text = "Sites";
             this.SitesCheck.UseVisualStyleBackColor = true;
+            this.SitesCheck.CheckedChanged += new System.EventHandler(this.SitesCheck_CheckedChanged);
             // 
             // CornerCheck
             // 
             this.CornerCheck.AutoSize = true;
             this.CornerCheck.Location = new System.Drawing.Point(449, 25);
             this.CornerCheck.Name = "CornerCheck";
-            this.CornerCheck.Size = new System.Drawing.Size(62, 17);
+            this.CornerCheck.Size = new System.Drawing.Size(68, 17);
             this.CornerCheck.TabIndex = 8;
             this.CornerCheck.Text = "Corners";
             this.CornerCheck.UseVisualStyleBackColor = true;
+            this.CornerCheck.CheckedChanged += new System.EventHandler(this.CornerCheck_CheckedChanged);
             // 
             // RiverCheck
             // 
@@ -237,10 +235,11 @@
             this.RiverCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.RiverCheck.Location = new System.Drawing.Point(526, 44);
             this.RiverCheck.Name = "RiverCheck";
-            this.RiverCheck.Size = new System.Drawing.Size(56, 17);
+            this.RiverCheck.Size = new System.Drawing.Size(62, 17);
             this.RiverCheck.TabIndex = 12;
             this.RiverCheck.Text = "Rivers";
             this.RiverCheck.UseVisualStyleBackColor = true;
+            this.RiverCheck.CheckedChanged += new System.EventHandler(this.RiverCheck_CheckedChanged);
             // 
             // BiomeCheck
             // 
@@ -249,10 +248,11 @@
             this.BiomeCheck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.BiomeCheck.Location = new System.Drawing.Point(526, 6);
             this.BiomeCheck.Name = "BiomeCheck";
-            this.BiomeCheck.Size = new System.Drawing.Size(60, 17);
+            this.BiomeCheck.Size = new System.Drawing.Size(66, 17);
             this.BiomeCheck.TabIndex = 10;
             this.BiomeCheck.Text = "Biomes";
             this.BiomeCheck.UseVisualStyleBackColor = true;
+            this.BiomeCheck.CheckedChanged += new System.EventHandler(this.BiomeCheck_CheckedChanged);
             // 
             // label3
             // 
@@ -324,6 +324,7 @@
             this.MapPanel.Name = "MapPanel";
             this.MapPanel.Size = new System.Drawing.Size(934, 844);
             this.MapPanel.TabIndex = 1;
+            this.MapPanel.MouseHover += new System.EventHandler(this.MapPanel_MouseHover);
             // 
             // MapImageBox
             // 
@@ -333,8 +334,26 @@
             this.MapImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.MapImageBox.TabIndex = 0;
             this.MapImageBox.TabStop = false;
+            this.MapImageBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MapImageBox_MouseDown);
+            this.MapImageBox.MouseHover += new System.EventHandler(this.MapImageBox_MouseHover);
+            this.MapImageBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MapImageBox_MouseMove);
+            this.MapImageBox.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MapImageBox_MouseUp);
+            this.MapImageBox.MouseWheel += Zoom;
             // 
-            // CubbyLand
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.SaveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.SaveButton.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveButton.Location = new System.Drawing.Point(856, 3);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(75, 62);
+            this.SaveButton.TabIndex = 17;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -350,7 +369,6 @@
             this.MapPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MapImageBox)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
