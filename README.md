@@ -38,6 +38,7 @@ The main code of this repository is based on [Polygonal Map Generator](https://g
   * Output data options
   * Etc
 * Make grid-based calculation and show grid-based map result.
+* Export map data to text-based information (e.g. text, XML, or JSON).
 * Add polygonal map generator for basement (e.g. lava, mineral, cave, ground water, and so on).
 
 ## Screenshots
