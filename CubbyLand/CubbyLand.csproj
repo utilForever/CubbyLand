@@ -58,6 +58,7 @@
     <Compile Include="Edge.cs" />
     <Compile Include="EdgeList.cs" />
     <Compile Include="EdgeReorderer.cs" />
+    <Compile Include="GraphImplementation.cs" />
     <Compile Include="HalfEdge.cs" />
     <Compile Include="HalfEdgePriorityQueue.cs" />
     <Compile Include="ICoord.cs" />
